@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game", "ModSupportForGamesDemo\Game.csproj", "{C6A967CB-8A2B-46FF-B359-746A165B0E6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game", "Game\Game.csproj", "{C6A967CB-8A2B-46FF-B359-746A165B0E6D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game_Mod_Interface", "ModAPI\Game_Mod_Interface.csproj", "{B70D3F95-11C0-4B02-9EE4-7968CF83DA80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game_Mod_Interface", "Game_Mod_Interface\Game_Mod_Interface.csproj", "{B70D3F95-11C0-4B02-9EE4-7968CF83DA80}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleMod", "ExampleMod\ExampleMod.csproj", "{64819CA1-8FF7-49A4-B9CD-DC6F37E03494}"
 EndProject
