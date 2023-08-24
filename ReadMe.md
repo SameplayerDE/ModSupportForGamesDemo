@@ -6,10 +6,6 @@
 
 3. **Place the Mod in the Correct Directory**: After building your mod, you'll find the DLL file in the output directory. You must manually move this file to the game's mod directory.
 
-   Example:
-   \`\`\`
-   Move YourMod.dll to C:\\Path\\To\\Game\\Mods
-   \`\`\`
 
 # Note
 
