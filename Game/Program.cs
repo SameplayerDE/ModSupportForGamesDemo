@@ -11,7 +11,6 @@ namespace Game
 
         public static void Main(string[] args)
         {
-
             var game = new GameImplementation();
             game.Run();
         }

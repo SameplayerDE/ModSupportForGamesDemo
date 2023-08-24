@@ -9,6 +9,7 @@ namespace Game_Mod_Interface
     public interface IGame
     {
         public bool RegisterCommand(string key, ICommand command);
+        public bool UnregisterCommand(string key);
         public bool IsRunning { get; }
         public void Stop();
     }

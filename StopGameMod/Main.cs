@@ -1,20 +1,20 @@
 ﻿using Game_Mod_Interface;
 
-namespace ExampleMod
+namespace StopGameMod
 {
-    public class Example : IMod
+    public class Main : IMod
     {
-        public string Name => "Example";
+        public string Name => "StopGameMod";
 
-        public string Description => "Does nothing";
+        public string Description => "Adds a command to stop the game";
 
-        public string Version => "1.0.1a";
+        public string Version => "12.4.5";
 
-        public string Author => "Me";
+        public string Author => "Steve F. Jobs";
 
         public void Init(IGame game)
         {
-            game.RegisterCommand("heal", new ExampleCommand());
+            game.RegisterCommand("stop", new StopCommand());
             Console.WriteLine($"{Name}:{Version} > INIT CALLED");
         }
 
@@ -25,7 +25,7 @@ namespace ExampleMod
 
         public void Unload(IGame game)
         {
-            game.UnregisterCommand("heal");
+            game.UnregisterCommand("stop");
             Console.WriteLine($"{Name}:{Version} > UNLOAD CALLED");
         }
     }

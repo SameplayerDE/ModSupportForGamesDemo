@@ -1,4 +1,5 @@
 ﻿using Game;
+using Game.Commands;
 using Game_Mod_Interface;
 using System.Diagnostics.Tracing;
 
@@ -10,7 +11,17 @@ namespace Game
         private Dictionary<string, ICommand> _commands = new();
         private bool _running = false;
 
+        public static string GlobalPath;
+        public static string ModPath;
+        public static GameImplementation Instance;
+
         public bool IsRunning => _running;
+
+        public GameImplementation()
+        {
+            Instance = this;
+            GameManager.SetGameInstance(Instance);
+        }
 
         public bool RegisterCommand(string key, ICommand command)
         {
@@ -20,6 +31,17 @@ namespace Game
             }
             _commands.Add(key, command);
             return true;
+        }
+
+
+        public bool UnregisterCommand(string key)
+        {
+            if (_commands.ContainsKey(key))
+            {
+                _commands.Remove(key);
+                return true;
+            }
+            return false;
         }
 
         public void Stop()
@@ -32,17 +54,17 @@ namespace Game
 
             //DO GLOBAL STUFF
 
-            var globalPath = CreateGlobalGameFolder(".ModSupportExample");
-            var modFolder = CreateFolder(Path.Combine(globalPath, "Mods"));
+            GlobalPath = CreateGlobalGameFolder(".ModSupportExample");
+            ModPath = CreateFolder(Path.Combine(GlobalPath, "Mods"));
 
             //DO GAME STUFF
 
-
+            RegisterCommand("mod", new ModCommand());
 
             //DO MOD STUFF
 
-            var mods = ModLoader.LoadAllMods(modFolder, this);
-            ModLoader.LoadMods(mods);
+            var mods = ModLoader.LoadAllMods(ModPath, this);
+            ModLoader.LoadMods(mods, this);
 
             //START GAME
 
@@ -50,6 +72,7 @@ namespace Game
 
             while (_running)
             {
+                Console.Write("> ");
                 string input = Console.ReadLine().ToLower().Trim();
                 input = System.Text.RegularExpressions.Regex.Replace(input, @"\s+", " "); // Diese Zeile ändert den String entsprechend deinen Wünschen
                 string[] parts = input.Split(' ');
@@ -84,5 +107,6 @@ namespace Game
             }
             return path;
         }
+
     }
 }

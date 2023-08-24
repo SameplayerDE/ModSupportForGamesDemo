@@ -14,6 +14,7 @@ namespace Game_Mod_Interface
         public string Author { get; }
 
         public void Init(IGame game);
-        public void Load();
+        public void Load(IGame game);
+        public void Unload(IGame game);
     }
 }

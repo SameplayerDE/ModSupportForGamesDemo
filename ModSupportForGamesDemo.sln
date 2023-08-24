@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Pr
 		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StopGameMod", "StopGameMod\StopGameMod.csproj", "{652FB6A5-961B-4E32-8199-EF52D288FFA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{64819CA1-8FF7-49A4-B9CD-DC6F37E03494}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64819CA1-8FF7-49A4-B9CD-DC6F37E03494}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64819CA1-8FF7-49A4-B9CD-DC6F37E03494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{652FB6A5-961B-4E32-8199-EF52D288FFA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{652FB6A5-961B-4E32-8199-EF52D288FFA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{652FB6A5-961B-4E32-8199-EF52D288FFA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{652FB6A5-961B-4E32-8199-EF52D288FFA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
